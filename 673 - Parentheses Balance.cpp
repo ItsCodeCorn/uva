@@ -12,8 +12,10 @@ int main() {
 
     int n;
     cin >> n;
+    cin.ignore();
     while (n--) {
-        cin >> str;
+        getline(cin, str, '\n');
+        
         len = str.length();
         isBalance = true;
         
@@ -36,7 +38,7 @@ int main() {
             }
         }
 
-        if (dp[len - 1] != -1) {
+        if (len - 1 >= 0 && dp[len - 1] != -1) {
             isBalance = false;
         }
         
