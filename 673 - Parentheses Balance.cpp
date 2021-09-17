@@ -15,10 +15,10 @@ int main() {
     cin.ignore();
     while (n--) {
         getline(cin, str, '\n');
-        
+
         len = str.length();
         isBalance = true;
-        
+
         dp.assign(len, 0);
 
         for (int i = 0; i < len; ++i) {
@@ -41,7 +41,7 @@ int main() {
         if (len - 1 >= 0 && dp[len - 1] != -1) {
             isBalance = false;
         }
-        
+
         if (isBalance) {
             cout << "Yes" << '\n';
         } else {
